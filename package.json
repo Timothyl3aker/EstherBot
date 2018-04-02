@@ -1,8 +1,8 @@
 {
-  "name": "smooch-bot-example",
+  "name": "careerbot",
   "version": "1.0.0",
-  "description": "Smooch Bot Example Apps",
-  "author": "Andrew Lavers <alavers@system42.net> (http://smooch.io/)",
+  "description": "personal bot recruiter",
+  "author": "tim.l3aker@gmail.com",
   "scripts": {
     "start": "node heroku"
   },
