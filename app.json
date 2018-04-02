@@ -17,6 +17,10 @@
     "SMOOCH_SECRET": {
       "description": "Your Smooch secret, used to talk to the Smooch API",
       "required": true
+    },
+    "APIAI_CLIENT_ACCESS_TOKEN": {
+      "description": "Your api.ai client access token, used to talk to the api.ai API",
+      "required": true
     }
   }
 }
