@@ -10,25 +10,33 @@ module.exports = new Script({
  
     start: {
         receive: (bot) => {
-            return bot.say('Hi I\'m Timbot.  So you want to learn more about Tim...')
+            return bot.say('Hi I\'m Timbot.')
                 .then(() => 'askName');
         }
     },
  
    askName: {
-       prompt: (bot) => bot.say('I can fill you in. What\'s your name?'),
+       prompt: (bot) => bot.say('So you want to learn more about Tim.... What\'s your name?'),
          receive: (bot, message) => {
            const name = message.text;
           return bot.setProp('name', name)
                .then(() => bot.say(`Great! Thanks ${name}
  Are you a recruiter? %[Yes](postback:yes) %[No](postback:no)`))
-                .then(() => 'giveExamples');
+                .then(() => 'choose');
         }
     },
 
-    giveExamples: {
+    choose: {
         receive: (bot) => {
-        return bot.say('What would you like to know?')
+        return bot.say(`Ok pick a subject
+    %[Skill Set](postback:Skill Set) %[Work History](postback:Work History)`))
+                .then(() => 'reachOut');
+        }
+    },
+    
+        reachOut: {
+        receive: (bot) => {
+        return bot.say('Would you like me to reach out to Tim?')
                 .then(() => 'finish');
         }
     },
@@ -37,7 +45,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             return bot.getProp('name')
                 .then((name) => bot.say(`Sorry ${name}, Tim didn\'t ` +
-                         'teach me how to do anything else!'))
+                         'how to respond that!'))
                  .then(() => 'finish');
       } 
     }
