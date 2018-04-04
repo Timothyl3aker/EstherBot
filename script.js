@@ -34,14 +34,14 @@ module.exports = new Script({
     
         reachOut: {
         receive: (bot) => {
-        return bot.say(`Would you like me to reach out to Tim? Click then leave me your contact info. Only Tim will use it %[Yes](postback:yes) %[No](postback:no)`)
+        return bot.say(`Would you like me to reach out to Tim? Click yes then chat your contact info. Only Tim will use it %[Yes](postback:yes) %[No](postback:no)`)
                   .then(() => 'recap');
         }
     },
     
         recap: {
          receive: (bot, message) => {
-         return bot.say(`Roger that ${name} Tim will contact you shortly.`))
+         return bot.say('Roger that Tim will contact you shortly.')
                 .then(() => 'finish');
         }
     },
