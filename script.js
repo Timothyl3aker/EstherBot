@@ -27,14 +27,14 @@ module.exports = new Script({
     },
 
     choose: {
-        receive: (bot, message) => {
+        receive: (bot) => {
         return bot.say(`Ok pick a subject %[SkillSet](postback:SkillSet) %[WorkHistory](postback:WorkHistory)`)
                 .then(() => 'reachOut');
         }
     },
     
         reachOut: {
-        receive: (bot, message) => {
+        receive: (bot) => {
         return bot.say('Would you like me to reach out to Tim?')
                 .then(() => 'finish');
         }
