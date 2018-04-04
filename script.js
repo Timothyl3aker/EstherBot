@@ -20,16 +20,14 @@ module.exports = new Script({
          receive: (bot, message) => {
            const name = message.text;
           return bot.setProp('name', name)
-               .then(() => bot.say(`Great! Thanks ${name}
- Are you a recruiter? %[Yes](postback:yes) %[No](postback:no)`))
+               .then(() => bot.say(`Great! Thanks ${name} Are you a recruiter?`))
                 .then(() => 'choose');
         }
     },
 
     choose: {
-        prompt: (bot) => bot.say('Ok pick your subjects'),
         receive: (bot) => {
-        return bot.say(`Ping me when your done %[SkillSet](https://timothyl3aker.github.io) %[WorkHistory](https://timothyl3aker.github.io/bio)`)
+        return bot.say(`Ok pick your subjects and ping me when your done %[SkillSet](https://timothyl3aker.github.io) %[WorkHistory](https://timothyl3aker.github.io/bio)`)
                 .then(() => 'reachOut');
         }
     },
