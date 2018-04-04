@@ -34,7 +34,8 @@ module.exports = new Script({
     
         reachOut: {
         receive: (bot) => {
-        return bot.say('Would you like me to reach out to Tim?')
+        return bot.say('Would you like me to reach out to Tim? Click then leave me your contact info. Only Tim will use it %[Yes](postback:yes) %[No](postback:no)`))
+                .then(() => bot.say(`Roger that ${name} Tim will contact you shortly.`)) 
                 .then(() => 'finish');
         }
     },
@@ -42,8 +43,8 @@ module.exports = new Script({
     finish: {
         receive: (bot, message) => {
             return bot.getProp('name')
-                .then((name) => bot.say(`Sorry ${name}, Tim didn\'t ` +
-                         'how to respond that!'))
+                .then((name) => bot.say(`Good talking to you ${name}, Msg sent but Tim didn\'t teach me` +
+                         'to respond to that!'))
                  .then(() => 'finish');
       } 
     }
