@@ -24,13 +24,14 @@ module.exports = new Script({
         }
     },
         giveExamples: {
-        prompt: (bot) => bot.say('It would be sweet to be human but I am just a bot. These are the career specific keywords Tim has taught me to repoond to.'),
+        receive: (bot) => {
+        return bot.say('What would you like to know?'),
                 .then(() => 'reachOut');
         }
     },
         reachOut: {
-        prompt: (bot) => bot.say('I vaca on most major meesaging platforms, mail servers, sms and voice. Tell me which works for you.'),
         receive: (bot, message) => {
+        return bot.say('I vaca on most major messaging platforms, mail servers, sms and voice. Tell me which works for you.'),
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say('Would you like to reach out to Tim'}
