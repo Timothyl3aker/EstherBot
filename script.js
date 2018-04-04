@@ -35,7 +35,7 @@ module.exports = new Script({
 
     reachOut: {
         receive: (bot, message) => {
-        return bot.say('I vaca on most major messaging platforms, mail servers, sms and voice. Tell me which works for you.'),
+        return bot.say('I vaca on most major messaging platforms, mail servers, sms and voice. Tell me which works for you.')
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say('Would you like to reach out to Tim'}
