@@ -34,7 +34,7 @@ module.exports = new Script({
     },
     
         reachOut: {
-        receive: (bot) => {
+        receive: (bot, message) => {
         return bot.say('Would you like me to reach out to Tim?')
                 .then(() => 'finish');
         }
