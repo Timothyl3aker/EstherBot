@@ -11,7 +11,7 @@ const SmoochCore = require('smooch-core');
 const jwt = require('../jwt');
 
 const name = 'TimBot';
-const avatarUrl = 'https://s.gravatar.com/avatar/f91b04087e0125153623a3778e819c0a?s=80';
+const avatarUrl = 'https://raw.githubusercontent.com/Timothyl3aker/EstherBot/master/img/TimBotAVAtar.png';
 const store = new SmoochApiStore({
     jwt
 });
