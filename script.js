@@ -50,7 +50,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             return bot.getProp('name')
                 .then((name) => bot.say(`Good talking to you ${name}, Msg sent but Tim didn\'t teach me` +
-                         'to respond to that!'))
+                         'to respond to that.'))
                  .then(() => 'finish');
       } 
     }
