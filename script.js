@@ -27,7 +27,7 @@ module.exports = new Script({
 
     giveExamples: {
         receive: (bot) => {
-        return bot.say('What would you like to know?'),
+        return bot.say('What would you like to know?')
                 .then(() => 'reachOut');
         }
     },
@@ -45,7 +45,7 @@ module.exports = new Script({
     finish: {
         receive: (bot, message) => {
             return bot.getProp('name')
-                .then((name) => bot.say(`Sorry ${name}, Tim didn't ` +
+                .then((name) => bot.say(`Sorry ${name}, Tim didn\'t ` +
                          'teach me how to do anything else!'))
                  .then(() => 'finish');
       } 
