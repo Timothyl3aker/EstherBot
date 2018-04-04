@@ -28,7 +28,7 @@ module.exports = new Script({
 
     choose: {
         receive: (bot) => {
-        return bot.say(`Ok pick a subject %[SkillSet](postback:SkillSet) %[WorkHistory](postback:WorkHistory)`))
+        return bot.say(`Ok pick a subject %[SkillSet](postback:SkillSet) %[WorkHistory](postback:WorkHistory)`)
                 .then(() => 'reachOut');
         }
     },
