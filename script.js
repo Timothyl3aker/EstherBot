@@ -41,7 +41,7 @@ module.exports = new Script({
     
         recap: {
          receive: (bot, message) => {
-         return bot.say('Roger that ${name} Tim will contact you shortly.')
+         return bot.say(`Roger that ${name} Tim will contact you shortly.`))
                 .then(() => 'finish');
         }
     },
