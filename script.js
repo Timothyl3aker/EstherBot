@@ -44,7 +44,7 @@ askName: {
 -    finish: {
 -        receive: (bot, message) => {
 -            return bot.getProp('name')
--                .then((name) => bot.say(`Sorry ${name}, Tim didn't ` +
--                        'teach me how to do anything else!'))
--                .then(() => 'finish');
-}
++                .then((name) => bot.say(`Sorry ${name}, Tim didn't ` +
+                         'teach me how to do anything else!'))
+                 .then(() => 'finish');
+     } 
